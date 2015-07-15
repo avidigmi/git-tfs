@@ -24,8 +24,8 @@ namespace Sep.Git.Tfs
                 new Regex("^\\s*" +
                           GitTfsPrefix +
                           "-id:\\s+" +
-                          "\\[(?<url>.+)\\]" +
-                          "(?<repository>\\$.+)?;" +
+                          "\\[(?<url>[^\\]]+)\\]" +
+                          "(?<repository>.+);" +
                           "C(?<changeset>\\d+)" +
                           "\\s*$", RegexOptions.Multiline|RegexOptions.Compiled);
         // e.g. git-tfs-work-item: 24 associate
